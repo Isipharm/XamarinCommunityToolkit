@@ -217,7 +217,7 @@ namespace Xamarin.CommunityToolkit.UI.Views
 					time = 100u;
 				}
 
-				await Task.WhenAll(layout.Children.Select(a => a.FadeTo(opacity, time)));
+				await Task.WhenAll(layout.Children.ToList().Select(a => a.FadeTo(opacity, time)));
 			}
 		}
 

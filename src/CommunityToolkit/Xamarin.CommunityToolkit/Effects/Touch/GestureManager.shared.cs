@@ -85,7 +85,7 @@ namespace Xamarin.CommunityToolkit.Effects
 
 		internal void HandleUserInteraction(TouchEffect sender, TouchInteractionStatus interactionStatus)
 		{
-			if (sender.InteractionStatus != interactionStatus)
+			if (sender.Element != null && sender.InteractionStatus != interactionStatus)
 			{
 				sender.InteractionStatus = interactionStatus;
 				sender.RaiseInteractionStatusChanged();
